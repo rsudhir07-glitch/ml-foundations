@@ -1,177 +1,305 @@
-# age = int(input("please enter your age "))
+age = int(input("please enter your age "))
 
-# if age < 13:
-#     print("you are a child")
-# elif age < 20:
-#     print ("you are a teenager ")   
-# elif age < 60 :
-#     print("you are an adult")
-# else:
-#     print("wassup unc")   
+if age < 13:
+    print("you are a child")
+elif age < 20:
+    print ("you are a teenager ")   
+elif age < 60 :
+    print("you are an adult")
+else:
+    print("wassup unc")   
 
 
 
-# age = int(input("please enter your age"))
-# day = input (" what day is today ?")
+age = int(input("please enter your age"))
+day = input (" what day is today ?")
 
-# if age > 18 :
-#     print ("ticket price is 12$")
+if age > 18 :
+    print ("ticket price is 12$")
  
-# elif age < 18 and day == "wednesday" :
-#     print ("ticket price is 6$")
-# elif age < 18 :
-#     print("ticket price is 8$")       
-# else:
-#     print ("ticket price is 10$")     
+elif age < 18 and day == "wednesday" :
+    print ("ticket price is 6$")
+elif age < 18 :
+    print("ticket price is 8$")       
+else:
+    print ("ticket price is 10$")     
 
 
 
 
-# password = input("please enter your password")
-# passwordcharlength = len(password)
+password = input("please enter your password")
+passwordcharlength = len(password)
 
-# if passwordcharlength < 6 : print("your password is weak ")
-# elif passwordcharlength <= 10  : print("your password is medium ")
-# else : print("your password is strong")
-
-
-
-
-# year = 2032
-# if year % 4 == 0  and year % 100 != 0:
-#     print ("this is a leap year") 
-
-# elif year % 400 == 0:
-#     print("this is a leap year")
-# else: print("this is not a leap year ")    
+if passwordcharlength < 6 : print("your password is weak ")
+elif passwordcharlength <= 10  : print("your password is medium ")
+else : print("your password is strong")
 
 
 
-# n = 10
-# sumofeven = 0
 
-# for nums in range (1, n+1 ):
-#     if nums % 2 == 0:
-#         sumofeven = sumofeven + nums 
-# print("sum of even numbers from 1 to ", n , "is", sumofeven)        
+year = 2032
+if year % 4 == 0  and year % 100 != 0:
+    print ("this is a leap year") 
 
-# given_number = 10
-# sumofevennums = 0
-
-# for nums in range(0,given_number+1):
-#     if nums % 2 == 0:
-#      sumofevennums = sumofevennums + nums 
-# print(sumofevennums)    
-
-# num = 5
-
-# for multiplier in range(0,11):
-#     value = num * multiplier
-#     if multiplier == 5:
-#        pass 
-#     else: 
-#        print(num, "*", multiplier, "=", value)
-
-# name = 'sudhir'
-# reversedname = ''
-
-# for characters in name:
-#   reversedname = characters + reversedname 
-
-# print(reversedname)  
-
-# text = 'teeter'
-
-# for char in text:
-#     if text.count(char) == 1:
-#         print(char)
+elif year % 400 == 0:
+    print("this is a leap year")
+else: print("this is not a leap year ")    
 
 
-# while True:
+
+n = 10
+sumofeven = 0
+
+for nums in range (1, n+1 ):
+    if nums % 2 == 0:
+        sumofeven = sumofeven + nums 
+print("sum of even numbers from 1 to ", n , "is", sumofeven)        
+
+given_number = 10
+sumofevennums = 0
+
+for nums in range(0,given_number+1):
+    if nums % 2 == 0:
+     sumofevennums = sumofevennums + nums 
+print(sumofevennums)    
+
+num = 5
+
+for multiplier in range(0,11):
+    value = num * multiplier
+    if multiplier == 5:
+       pass 
+    else: 
+       print(num, "*", multiplier, "=", value)
+
+name = 'sudhir'
+reversedname = ''
+
+for characters in name:
+  reversedname = characters + reversedname 
+
+print(reversedname)  
+
+text = 'teeter'
+
+for char in text:
+    if text.count(char) == 1:
+        print(char)
+
+
+while True:
  
-#  UserInput = int(input("please enter your number : "))
-#  if UserInput < 10 > 1:
-#     print("you entered the right number")
-#     break 
-#  else: 
-#     print("enter again : ")   
+ UserInput = int(input("please enter your number : "))
+ if UserInput < 10 > 1:
+    print("you entered the right number")
+    break 
+ else: 
+    print("enter again : ")   
 
 
-# usernumber = int(input("enter your number : "))
-# condition = True 
+usernumber = int(input("enter your number : "))
+condition = True 
 
-# if usernumber > 1:
-#     for number in range( 2, usernumber):
-#      if (usernumber % number == 0):
-#         condition = False 
-#         break 
+if usernumber > 1:
+    for number in range( 2, usernumber):
+     if (usernumber % number == 0):
+        condition = False 
+        break 
 
-# print(condition)    
+print(condition)    
 
-# import math 
+import math 
 
-# def square_cube(number):
-#     cube = math.floor(number ** 3)
-#     square = math.floor(number ** 2)
-#     return cube, square 
+def square_cube(number):
+    cube = math.floor(number ** 3)
+    square = math.floor(number ** 2)
+    return cube, square 
 
-# cube , square = square_cube (12.2)
+cube , square = square_cube (12.2)
 
-# print("cube :", cube , 'square :', square )
-
-
-# username = input('please enter your name : ')
-# default_username = 'customer'
-
-# def greeting(username):
-
-#     if username == '':
-#            print('hello ', default_username )
-#     else : print('hello ', username )
-
-# greeting(username)        
+print("cube :", cube , 'square :', square )
 
 
-# def odd_num_generator(num):
-#    for numbers in range(0, num + 1, 1):
-#     print(numbers)
-# odd_num_generator(15)   
+username = input('please enter your name : ')
+default_username = 'customer'
+
+def greeting(username):
+
+    if username == '':
+           print('hello ', default_username )
+    else : print('hello ', username )
+
+greeting(username)        
+
+
+def odd_num_generator(num):
+   for numbers in range(0, num + 1, 1):
+    print(numbers)
+odd_num_generator(15)   
 
  
 
-# class name:
-#     def __init__(self, firstname, lastname):
-#         self.firstname = firstname 
-#         self.lastname = lastname 
+class name:
+    def __init__(self, firstname, lastname):
+        self.firstname = firstname 
+        self.lastname = lastname 
 
-#     def fullname(self):
-#         return f"{self.firstname} {self.lastname}"
+    def fullname(self):
+        return f"{self.firstname} {self.lastname}"
     
 
-# student1 = name('sudhir', 'dhankar')    
+student1 = name('sudhir', 'dhankar')    
 
-# print(student1.fullname())
+print(student1.fullname())
 
 
-#! HERE 
+! HERE 
 
-# class information:
-#     usecount = 0 
+class information:
+    usecount = 0 
 
-#     def __init__ (self, fullname, age):
-#         self.fullname = fullname
-#         self.age = age
-#         information.usecount += 1 
-#     def fullinformation(self):
-#       return 'candidates name is' , self.fullname ,'and his age is' ,self.age 
+    def __init__ (self, fullname, age):
+        self.fullname = fullname
+        self.age = age
+        information.usecount += 1 
+    def fullinformation(self):
+      return 'candidates name is' , self.fullname ,'and his age is' ,self.age 
     
      
-# candidate1 = information('sudhir', 46)
-# candidate2 = information('ronaldo', 41)
-# candidate3 = information('neymar', 35)
+candidate1 = information('sudhir', 46)
+candidate2 = information('ronaldo', 41)
+candidate3 = information('neymar', 35)
 
-# print(candidate1.fullinformation())
-# print(candidate2.fullinformation())
-# print(candidate3.fullinformation())
+print(candidate1.fullinformation())
+print(candidate2.fullinformation())
+print(candidate3.fullinformation())
 
-# print(information.usecount)
+print(information.usecount)
+
+def integer (num):
+    def multiplier(x):
+        return num * x
+    return multiplier
+
+result1 = integer(2)
+
+print(result1(3))
+
+def decorator(func):
+     
+      def wrapper():
+        print("starting")
+
+        func()
+        
+       
+        print("finished")
+       
+      return wrapper
+              
+
+@decorator
+def nameprinter():
+         print('sudhir dhankar')
+   
+nameprinter()
+
+def greet(func):
+    def wrapper(name):
+       result = func(name)
+       return f"original name : {result}"
+    return wrapper
+
+@greet
+def user(name):
+    return name
+print(user('sudhir'))
+print(user('ronaldo'))
+
+
+def greetings(func):
+    
+    def wrapper():
+        print('welcome')
+        func()
+        print('goodbye')
+
+    return wrapper   
+@greetings
+def username():
+    print('sudhir dhankar')
+
+username()   
+
+        
+def touppercase(func):
+   
+    def wrapper():
+      print(func().upper())
+    return wrapper 
+
+@touppercase
+def user():
+   return('sudhir')
+
+user()  
+
+def addition(func):
+    def wrapper(*args):
+      result = func(*args)
+      return result
+    return wrapper  
+@addition
+def add(a ,b):
+   return a + b 
+
+print(add(3 , 5))
+print(add.__name__)
+
+
+def count_vowels(name):
+    vowelcount = 0
+    for letters in name.lower():
+      if letters in 'aeiou':
+         vowelcount += 1
+    return vowelcount 
+            
+print(count_vowels('sudhir'))
+        
+
+numbers = [2, 4, 6 ,7, 9, 6]
+
+largest = numbers[0]
+
+for number in numbers:
+    if number > largest:
+        largest = number
+
+print(largest)
+
+sentence = 'sudhir and cristiano'
+words = sentence.split() #! BY DOING THIS, STRING GETS CONVERTED INTO LIST 
+
+empty = ""
+
+for word in words:
+    empty = word + ' ' + empty
+print(empty)
+
+
+import requests 
+
+def fetchapi():
+    url = 'https://api.freeapi.app/api/v1/public/books'
+    response = requests.get(url)
+    data = response.json()
+
+    if data['success'] and 'data' in data:
+        userdata = data['data']
+        kind = userdata['data'][1]['kind']
+        return kind
+      
+print(fetchapi())    
+        
+       
+
