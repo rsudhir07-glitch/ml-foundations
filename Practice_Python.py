@@ -1,3 +1,4 @@
+
 age = int(input("please enter your age "))
 
 if age < 13:
@@ -153,7 +154,7 @@ student1 = name('sudhir', 'dhankar')
 print(student1.fullname())
 
 
-! HERE 
+
 
 class information:
     usecount = 0 
@@ -302,4 +303,3 @@ def fetchapi():
 print(fetchapi())    
         
        
-
