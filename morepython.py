@@ -142,3 +142,50 @@
 # r = functools.reduce(lambda x,y : x + y , m) #* NOW WE USE THE SQUARE VALUES FROM m ADD THEM ALTOGETHER
 
 # print(r)
+
+'''RECURSION'''
+
+#* A FUNCTION THAT CALLS ITSELF
+
+# def countdown(n):
+
+#     if n == 0:
+#         return 
+#     print(n)
+#     countdown(n - 1)
+
+# countdown(5)    
+
+'''CLOSURE'''
+
+# def number(n):
+#     def power(x):
+#         return n ** x
+#     return power
+# num = number(4)
+# print(num(2))
+
+
+# def counter():
+#     count = 0
+
+#     def inner():
+#         nonlocal count
+#         count+=1
+
+#         return count
+#     return inner 
+
+# res = counter()  
+# print(res())
+# print(res())
+# print(res())
+
+# def greet(text):
+
+#     def inner():
+#         return f"hello {text}"  
+#     return inner
+
+# greetsudhir = greet('sudhir')
+# print(greetsudhir())
