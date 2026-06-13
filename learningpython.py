@@ -81,6 +81,8 @@ for characters in name:
 
 print(reversedname)  
 
+
+####
 text = 'teeter'
 
 for char in text:
@@ -254,8 +256,10 @@ def addition(func):
 def add(a ,b):
    return a + b 
 
+
 print(add(3 , 5))
 print(add.__name__)
+
 
 
 def count_vowels(name):
@@ -266,6 +270,8 @@ def count_vowels(name):
     return vowelcount 
             
 print(count_vowels('sudhir'))
+
+
         
 
 numbers = [2, 4, 6 ,7, 9, 6]
@@ -301,5 +307,3 @@ def fetchapi():
         return kind
       
 print(fetchapi())    
-        
-       
