@@ -189,3 +189,36 @@
 
 # greetsudhir = greet('sudhir')
 # print(greetsudhir())
+
+'''DECORATORS'''
+
+# def decorator(func):
+#     def wrapper():
+#         print('function started')
+#         func()
+#         print('function ended')
+#     return wrapper
+
+# @decorator
+# def greet():
+#     print("hello sudhir") 
+
+# greet()
+
+
+# def showname(func):
+#     def wrapper(*args):
+        
+#         print(func.__name__)
+#         return func(*args)
+#     return wrapper
+
+# @showname
+# def add(a,b):
+#     return a + b
+
+# print(add(2,3))
+
+
+
+
