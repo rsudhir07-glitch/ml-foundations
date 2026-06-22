@@ -66,4 +66,63 @@
 # acc1.debit(5000) 
 # acc1.credit(10000)    
 
+'''INHERTITANCE'''
 
+# class car:    
+#     def start(self): print('started')
+    
+#     def stop(self): print('stopped')
+
+# class carname(car):
+#     def __init__(self, name):
+#         self.name = name
+
+# class cartype(carname):
+#     def  __init__(self, type , name):
+#         super().__init__(name)
+#         self.type = type
+      
+# car1 = cartype('diesel','fortuner')
+
+# print(car1.name)
+# print(car1.type)
+
+
+# class parent:
+#     def greet(self):
+#         print('hello user')
+
+
+# class child(parent):
+#     def hello(self): #* NO SUPER() NEEDED WHEN CALLING INHERITED METHODS
+#         print('welcome')    
+
+
+# d = child()
+# print(d.greet())
+
+
+# class person:
+#     def __init__(self, name , age):
+#         self.name = name
+#         self.age = age
+
+#     def display(self):
+#         print('NAME :', self.name)
+#         print('AGE :' ,self.age)    
+
+
+# class student(person):
+#     def __init__(self, name, age , course):
+#         super().__init__(name,age) #* OVERRIDING PARENTS __init__() AND NEED PARENT SETUP, USE SUPER()
+#         self.course = course
+
+#     def display(self):
+#         print('student details')
+#         super().display() #* OVERRIDING ANY METHOD BUT NEED PARENT SETUP TOO, USE SUPER()
+#         print('COURSE:' , self.course)
+
+
+# s1 = student("Sudhir", 18, "BA English")
+
+# s1.display()
