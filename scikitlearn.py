@@ -89,29 +89,100 @@
 # print( y_test)  
 
 ''''''
-import pandas as pd
-from sklearn.model_selection import train_test_split
+# import pandas as pd
+# from sklearn.model_selection import train_test_split
 
 
-data = {
-    'Age': [20, 25, 30, 35, 40, 45],
-    'Salary': [25000, 30000, 40000, 50000, 60000, 70000],
-    'Purchased': [0, 0, 1, 1, 1, 0]
-}
-df = pd.DataFrame(data)
-x = df[['Age' , 'Salary']]
-y = df['Purchased']
+# data = {
+#     'Age': [20, 25, 30, 35, 40, 45],
+#     'Salary': [25000, 30000, 40000, 50000, 60000, 70000],
+#     'Purchased': [0, 0, 1, 1, 1, 0]
+# }
+# df = pd.DataFrame(data)
+# x = df[['Age' , 'Salary']]
+# y = df['Purchased']
 
-x_train, x_test , y_train , y_test = train_test_split(
-    x,y,
-    test_size=0.33,
-    random_state=42
-)
+# x_train, x_test , y_train , y_test = train_test_split(
+#     x,y,
+#     test_size=0.33,
+#     random_state=42
+# )
 
-print(x_train)
-print()
-print(x_test)
-print()
-print(y_train)
-print()
-print(y_test)
+# print(x_train)
+# print()
+# print(x_test)
+# print()
+# print(y_train)
+# print()
+# print(y_test)
+
+'''REGRESSION'''
+
+'''LINEAR REGRESSION'''
+
+# import pandas as pd
+# from sklearn.linear_model import LinearRegression
+
+# data =  {
+#     'x' : [1,2,3,4],
+#     'y' :  [8,11,14,17]
+# }
+
+# df = pd.DataFrame(data)
+# x = df[['x']] #* WE WANT THE FEATURE/INPUT IN THE FORM OF A 2D ARRAY
+# y = df['y']
+
+# model = LinearRegression()
+# train = model.fit(x,y)
+# prediction = model.predict([[5]])  
+
+# print(prediction)   
+
+'''K N N '''
+
+#* PREDICTION IS BASED ON NEIGHBORS
+#* 0 MEANS FALSE AND 1 MEANS TRUE
+   
+# from sklearn.neighbors import KNeighborsClassifier
+
+# X = [[1], [2], [3], [8], [9], [10]] 
+
+# Y = [0, 0, 0, 1, 1, 1]
+
+# model = KNeighborsClassifier(n_neighbors = 3) #* SEE FOR 3 NEIGHBORS
+# model.fit(X,Y)
+# prediction = model.predict([[7]])
+# print(prediction)
+
+
+'''LOGISTIC REGRESSION'''
+
+# #* SAME AS LINEAR REGRESSION, BUT IT GIVES RESULTS IN THE FORM OF 0 OR 1 MEANING FALSE OR TRUE RESPECTIVELY
+
+# from sklearn.linear_model import LogisticRegression
+
+# X = [[1], [2], [3], [8], [9], [10]]
+# Y = [0, 0, 0, 1, 1, 1]
+
+# model = LogisticRegression()
+# model.fit(X,Y)
+
+# prediction = model.predict([[11]])[0] #* [0] GIVES THE INPUT VALUE ONLY, NOT A LIST 
+# print(prediction)
+
+
+'''DECISION TREES'''
+
+from sklearn.tree import DecisionTreeClassifier
+
+X = [[1], [2], [3], [5], [6], [7]]
+
+Y = [0, 0, 0, 1, 1, 1]
+
+model = DecisionTreeClassifier()
+
+model.fit(X, Y)
+
+prediction = model.predict([[4]])
+
+print(prediction)
