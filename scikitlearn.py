@@ -191,10 +191,18 @@
 
 '''
 
-Classification metrices are used when we want categorised predictions such as - yes/no (1,0) , spam/not spam , cat/dog, 
-pass/fail etc....
+Classification metrics are used to evaluate machine learning models that predict categories (classes) rather than continuous numerical values.
 
-classification matrix - recall, accuracy, f1_score, precision and confusion_matrix
+Examples:
+
+Yes / No
+Spam / Not Spam
+Cat / Dog
+Pass / Fail
+Fraud / Not Fraud
+Disease / No Disease
+
+classification matrices - recall, accuracy, f1_score, precision and confusion_matrix
 
 '''
 
