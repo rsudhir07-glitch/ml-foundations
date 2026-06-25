@@ -1,4 +1,4 @@
-# from sklearn.preprocessing import LabelEncoderCity
+# from sklearn.preprocessing import LabelEncoder
 # from sklearn.preprocessing import OneHotEncoder
 # import pandas as pd
 
@@ -21,6 +21,7 @@
 ''' FEATURE SCALING'''
 
 '''MIN MAX SCALING'''
+#* TO BRING THE DATASET BETWEEN 0 AND 1, SO THAT LARGER VALUES DONT DOMINATE THE LEARNING MODEL
 
 # from sklearn.preprocessing import MinMaxScaler
 # import pandas as pd
@@ -224,7 +225,7 @@ classification matrices - recall, accuracy, f1_score, precision and confusion_ma
 
 # print('f1_score :' , f1score )
 
-''''''
+'''CONFUSION MATRIX'''
 
 # from sklearn.metrics import confusion_matrix
 
