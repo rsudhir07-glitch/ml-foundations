@@ -1,265 +1,313 @@
-# from sklearn.preprocessing import LabelEncoder
-# from sklearn.preprocessing import OneHotEncoder
-# import pandas as pd
+# # from sklearn.preprocessing import LabelEncoder
+# # from sklearn.preprocessing import OneHotEncoder
+# # import pandas as pd
 
-# df = pd.DataFrame({
-#     'places': ['Delhi', 'Mumbai', 'Delhi', 'Chennai', 'Mumbai']
-# })
+# # df = pd.DataFrame({
+# #     'places': ['Delhi', 'Mumbai', 'Delhi', 'Chennai', 'Mumbai']
+# # })
 
-'''ENCODING'''
+# '''ENCODING'''
 
-# dummy = pd.get_dummies(df['places'])
-# print(dummy) #* THIS WILL GIVE BOOLEAN ENCODED VALUES OF PLACES IN COLUMN 
+# # dummy = pd.get_dummies(df['places'])
+# # print(dummy) #* THIS WILL GIVE BOOLEAN ENCODED VALUES OF PLACES IN COLUMN 
 
-# dummy = pd.get_dummies(df['places'], dtype = int)
-# print(dummy) #* THIS WILL CHANGE THE BOOLEAN VALUES INTO Os AND 1s
+# # dummy = pd.get_dummies(df['places'], dtype = int)
+# # print(dummy) #* THIS WILL CHANGE THE BOOLEAN VALUES INTO Os AND 1s
 
-# encoder = OneHotEncoder(sparse_output=False)
-# df['encodedvalues'] = encoder.fit_transform(df[['places']])
-# print(df)
+# # encoder = OneHotEncoder(sparse_output=False)
+# # df['encodedvalues'] = encoder.fit_transform(df[['places']])
+# # print(df)
 
-''' FEATURE SCALING'''
+# ''' FEATURE SCALING'''
 
-'''MIN MAX SCALING'''
-#* TO BRING THE DATASET BETWEEN 0 AND 1, SO THAT LARGER VALUES DONT DOMINATE THE LEARNING MODEL
+# '''MIN MAX SCALING'''
 
-# from sklearn.preprocessing import MinMaxScaler
-# import pandas as pd
+# #* TO BRING THE DATASET BETWEEN 0 AND 1, SO THAT LARGER VALUES DONT DOMINATE THE LEARNING MODEL
 
-# ages = [18, 22, 30, 40] #* THIS IS A 1D ARRAY
-# df = pd.DataFrame(ages) #* NOW IT IS CONVERTED INTO A DATAFRAME WITH A ROW AND COLUMN, WHICH MEANS ITS NOW A 2D ARRAY, BECAUSE MINMAXSCALER WORKS ONLY ON 2D ARRAYS
+# # from sklearn.preprocessing import MinMaxScaler
+# # import pandas as pd
 
-# scaler = MinMaxScaler()
-# scaled_data =  scaler.fit_transform(df)
-# # print(pd.DataFrame(scaled_data, columns = ['ages'])) #* HERE WE ARE CONVERTING THE SCALED DATA INTO A DATAFRAME AND GIVING NAME TO THE COLUMN AS AGE
+# # ages = [18, 22, 30, 40] #* THIS IS A 1D ARRAY
+# # df = pd.DataFrame(ages) #* NOW IT IS CONVERTED INTO A DATAFRAME WITH A ROW AND COLUMN, WHICH MEANS ITS NOW A 2D ARRAY, BECAUSE MINMAXSCALER WORKS ONLY ON 2D ARRAYS
 
-''''''
-# import pandas as pd
-# from sklearn.preprocessing import MinMaxScaler
+# # scaler = MinMaxScaler()
+# # scaled_data =  scaler.fit_transform(df)
+# # # print(pd.DataFrame(scaled_data, columns = ['ages'])) #* HERE WE ARE CONVERTING THE SCALED DATA INTO A DATAFRAME AND GIVING NAME TO THE COLUMN AS AGE
 
-# data = {
-#     'AGE' : [20,25,30,35],
-#     'SALARY' : [25000,40000,55000,70000]
-# }
+# ''''''
+# # import pandas as pd
+# # from sklearn.preprocessing import MinMaxScaler
 
-# df = pd.DataFrame(data)
-# scaler = MinMaxScaler()
+# # data = {
+# #     'AGE' : [20,25,30,35],
+# #     'SALARY' : [25000,40000,55000,70000]
+# # }
 
-# scaled = scaler.fit_transform(df)
-# framed = pd.DataFrame(scaled , columns = df.columns)
-# print(framed )
-# print(framed.shape)
-# print(framed.max())
-# print(framed.min())
+# # df = pd.DataFrame(data)
+# # scaler = MinMaxScaler()
 
-'''STANDARDIZATION'''
+# # scaled = scaler.fit_transform(df)
+# # framed = pd.DataFrame(scaled , columns = df.columns)
+# # print(framed )
+# # print(framed.shape)
+# # print(framed.max())
+# # print(framed.min())
 
-# import pandas as pd
-# from sklearn.preprocessing import StandardScaler
+# '''STANDARDIZATION'''
 
-# data = {
-#     'AGE' : [20,25,30,35],
-#      'SALARY' : [25000,40000,55000,70000]
-# }
-# df = pd.DataFrame(data)
-# scaler = StandardScaler()
-# scaled = scaler.fit_transform(df)
-# print(pd.DataFrame(scaled , columns= df.columns))
+# # import pandas as pd
+# # from sklearn.preprocessing import StandardScaler
 
-'''TRAIN TEST SPLIT'''
+# # data = {
+# #     'AGE' : [20,25,30,35],
+# #      'SALARY' : [25000,40000,55000,70000]
+# # }
+# # df = pd.DataFrame(data)
+# # scaler = StandardScaler()
+# # scaled = scaler.fit_transform(df)
+# # print(pd.DataFrame(scaled , columns= df.columns))
 
-# from sklearn.model_selection import train_test_split
-# import pandas as pd
+# '''TRAIN TEST SPLIT'''
 
-# data = {
-#     'Age': [22, 25, 47, 52, 46],
-#     'Salary': [25000, 32000, 48000, 52000, 50000],
-#     'Purchased': [0, 1, 1, 0, 1]
-# }
+# # from sklearn.model_selection import train_test_split
+# # import pandas as pd
 
-# df = pd.DataFrame(data)
+# # data = {
+# #     'Age': [22, 25, 47, 52, 46],
+# #     'Salary': [25000, 32000, 48000, 52000, 50000],
+# #     'Purchased': [0, 1, 1, 0, 1]
+# # }
 
-# X = df[['Age', 'Salary']] #* X IS WHAT WE USE TO MAKE THE PREDICTION WHICH ARE CALLED FEATURES
+# # df = pd.DataFrame(data)
 
-# y = df['Purchased'] #* Y IS WHAT WE WANT THE MODEL TO PREDICT
+# # X = df[['Age', 'Salary']] #* X IS WHAT WE USE TO MAKE THE PREDICTION WHICH ARE CALLED FEATURES
 
-# X_train, X_test, y_train, y_test = train_test_split(
-#     X, y, test_size=0.2, random_state=42
-# )
+# # y = df['Purchased'] #* Y IS WHAT WE WANT THE MODEL TO PREDICT
 
-# print( y_test)  
+# # X_train, X_test, y_train, y_test = train_test_split(
+# #     X, y, test_size=0.2, random_state=42
+# # )
 
-''''''
-# import pandas as pd
-# from sklearn.model_selection import train_test_split
+# # print( y_test)  
+
+# ''''''
+# # import pandas as pd
+# # from sklearn.model_selection import train_test_split
 
 
-# data = {
-#     'Age': [20, 25, 30, 35, 40, 45],
-#     'Salary': [25000, 30000, 40000, 50000, 60000, 70000],
-#     'Purchased': [0, 0, 1, 1, 1, 0]
-# }
-# df = pd.DataFrame(data)
-# x = df[['Age' , 'Salary']]
-# y = df['Purchased']
+# # data = {
+# #     'Age': [20, 25, 30, 35, 40, 45],
+# #     'Salary': [25000, 30000, 40000, 50000, 60000, 70000],
+# #     'Purchased': [0, 0, 1, 1, 1, 0]
+# # }
+# # df = pd.DataFrame(data)
+# # x = df[['Age' , 'Salary']]
+# # y = df['Purchased']
 
-# x_train, x_test , y_train , y_test = train_test_split(
-#     x,y,
-#     test_size=0.33,
-#     random_state=42
-# )
+# # x_train, x_test , y_train , y_test = train_test_split(
+# #     x,y,
+# #     test_size=0.33,
+# #     random_state=42
+# # )
 
-# print(x_train)
-# print()
-# print(x_test)
-# print()
-# print(y_train)
-# print()
-# print(y_test)
+# # print(x_train)
+# # print()
+# # print(x_test)
+# # print()
+# # print(y_train)
+# # print()
+# # print(y_test)
 
-'''REGRESSION'''
+# '''REGRESSION'''
 
-'''LINEAR REGRESSION'''
+# '''LINEAR REGRESSION'''
 
-# import pandas as pd
-# from sklearn.linear_model import LinearRegression
+# # import pandas as pd
+# # from sklearn.linear_model import LinearRegression
 
-# data =  {
-#     'x' : [1,2,3,4],
-#     'y' :  [8,11,14,17]
-# }
+# # data =  {
+# #     'x' : [1,2,3,4],
+# #     'y' :  [8,11,14,17]
+# # }
 
-# df = pd.DataFrame(data)
-# x = df[['x']] #* WE WANT THE FEATURE/INPUT IN THE FORM OF A 2D ARRAY
-# y = df['y']
+# # df = pd.DataFrame(data)
+# # x = df[['x']] #* WE WANT THE FEATURE/INPUT IN THE FORM OF A 2D ARRAY
+# # y = df['y']
 
-# model = LinearRegression()
-# train = model.fit(x,y)
-# prediction = model.predict([[5]])  
+# # model = LinearRegression()
+# # train = model.fit(x,y)
+# # prediction = model.predict([[5]])  
 
-# print(prediction)   
+# # print(prediction)   
 
-'''K N N '''
+# '''K N N '''
 
-#* PREDICTION IS BASED ON NEIGHBORS
-#* 0 MEANS FALSE AND 1 MEANS TRUE
+# #* PREDICTION IS BASED ON NEIGHBORS
+# #* 0 MEANS FALSE AND 1 MEANS TRUE
    
-# from sklearn.neighbors import KNeighborsClassifier
+# # from sklearn.neighbors import KNeighborsClassifier
 
-# X = [[1], [2], [3], [8], [9], [10]] 
+# # X = [[1], [2], [3], [8], [9], [10]] 
 
-# Y = [0, 0, 0, 1, 1, 1]
+# # Y = [0, 0, 0, 1, 1, 1]
 
-# model = KNeighborsClassifier(n_neighbors = 3) #* SEE FOR 3 NEIGHBORS
-# model.fit(X,Y)
-# prediction = model.predict([[7]])
-# print(prediction)
-
-
-'''LOGISTIC REGRESSION'''
-
-# #* SAME AS LINEAR REGRESSION, BUT IT GIVES RESULTS IN THE FORM OF 0 OR 1 MEANING FALSE OR TRUE RESPECTIVELY
-
-# from sklearn.linear_model import LogisticRegression
-
-# X = [[1], [2], [3], [8], [9], [10]]
-# Y = [0, 0, 0, 1, 1, 1]
-
-# model = LogisticRegression()
-# model.fit(X,Y)
-
-# prediction = model.predict([[11]])[0] #* [0] GIVES THE INPUT VALUE ONLY, NOT A LIST 
-# print(prediction)
+# # model = KNeighborsClassifier(n_neighbors = 3) #* SEE FOR 3 NEIGHBORS
+# # model.fit(X,Y)
+# # prediction = model.predict([[7]])
+# # print(prediction)
 
 
-'''DECISION TREES'''
+# '''LOGISTIC REGRESSION'''
 
+# # #* SAME AS LINEAR REGRESSION, BUT IT GIVES RESULTS IN THE FORM OF 0 OR 1 MEANING FALSE OR TRUE RESPECTIVELY
+
+# # from sklearn.linear_model import LogisticRegression
+
+# # X = [[1], [2], [3], [8], [9], [10]]
+# # Y = [0, 0, 0, 1, 1, 1]
+
+# # model = LogisticRegression()
+# # model.fit(X,Y)
+
+# # prediction = model.predict([[11]])[0] #* [0] GIVES THE INPUT VALUE ONLY, NOT A LIST 
+# # print(prediction)
+
+
+# '''DECISION TREES'''
+
+# # from sklearn.tree import DecisionTreeClassifier
+
+# # X = [[1], [2], [3], [5], [6], [7]]
+
+# # Y = [0, 0, 0, 1, 1, 1]
+
+# # model = DecisionTreeClassifier()
+
+# # model.fit(X, Y)
+
+# # prediction = model.predict([[4]])
+
+# # print(prediction)
+
+# '''CLASSIFICATION METRICES'''
+
+# '''
+
+# Classification metrics are used to evaluate machine learning models that predict categories (classes) rather than continuous numerical values.
+
+# Examples:
+
+# Yes / No
+# Spam / Not Spam
+# Cat / Dog
+# Pass / Fail
+# Fraud / Not Fraud
+# Disease / No Disease
+
+# classification matrices - recall, accuracy, f1_score, precision and confusion_matrix
+
+# '''
+
+# # from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
+
+# # y_true = [0, 1, 1, 0, 1, 0, 1]
+# # y_pred = [0, 1, 0, 0, 0, 1, 1]
+
+# # accuracy = accuracy_score(y_true , y_pred)
+# # precision = precision_score(y_true, y_pred)
+# # recall = recall_score(y_true , y_pred)
+# # f1score = f1_score(y_true , y_pred)
+
+# # print('accuracy :' , accuracy )
+
+# # print('precision :' , precision )
+
+# # print('recall :' , recall )
+
+# # print('f1_score :' , f1score )
+
+# '''CONFUSION MATRIX'''
+
+# # from sklearn.metrics import confusion_matrix
+
+# # y_true = [1, 1, 0, 0, 1, 0]
+# # y_pred = [1, 0, 0, 0, 1, 1]
+
+# # cm = confusion_matrix(y_true , y_pred)
+# # print(cm)
+
+# # #  RESULT - TN FP
+# # #             FN TP
+
+
+# '''REGRESSION METRICES'''
+
+# '''
+
+# Regression metrices are used when we are dealing with numerical predictions, such as - house price, student marks etc...
+
+# Regression matrix - MAE , MSE , RMSE , R square
+
+# '''
+# # from sklearn.metrics import mean_absolute_error, mean_squared_error, root_mean_squared_error, r2_score
+
+# # y_true = [10, 20, 30, 40]
+
+# # y_pred = [12, 18, 35, 38]
+
+# # mae = mean_absolute_error(y_true, y_pred)   
+# # mse = mean_squared_error(y_true, y_pred) 
+# # rmse = root_mean_squared_error(y_true, y_pred)
+# # rsquare = r2_score(y_true, y_pred)
+
+# # print('mae :' , mae)
+# # print('mse :' , mse)
+# # print('rmse :' , rmse)
+# # print('rsquare :' , rsquare)
+
+# '''PRACTICE KNN DECISION TREES AND FEATURE SCALING'''
+
+# import pandas as pd
 # from sklearn.tree import DecisionTreeClassifier
+# from sklearn.preprocessing import MinMaxScaler, StandardScaler
 
-# X = [[1], [2], [3], [5], [6], [7]]
+# #* FEATURE SCALING
+ 
+# data = {
+#     'Age': [20, 25, 30, 35, 40 , 45 , 50, 55, 60 , 65],
+#     'Salary': [20000, 30000, 50000, 70000, 90000 , 100000 , 120000, 130000 , 140000 , 160000]
+# }   
+# df = pd.DataFrame(data)
 
-# Y = [0, 0, 0, 1, 1, 1]
-
-# model = DecisionTreeClassifier()
-
-# model.fit(X, Y)
-
-# prediction = model.predict([[4]])
-
-# print(prediction)
-
-'''CLASSIFICATION METRICES'''
-
-'''
-
-Classification metrics are used to evaluate machine learning models that predict categories (classes) rather than continuous numerical values.
-
-Examples:
-
-Yes / No
-Spam / Not Spam
-Cat / Dog
-Pass / Fail
-Fraud / Not Fraud
-Disease / No Disease
-
-classification matrices - recall, accuracy, f1_score, precision and confusion_matrix
-
-'''
-
-# from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
-
-# y_true = [0, 1, 1, 0, 1, 0, 1]
-# y_pred = [0, 1, 0, 0, 0, 1, 1]
-
-# accuracy = accuracy_score(y_true , y_pred)
-# precision = precision_score(y_true, y_pred)
-# recall = recall_score(y_true , y_pred)
-# f1score = f1_score(y_true , y_pred)
-
-# print('accuracy :' , accuracy )
-
-# print('precision :' , precision )
-
-# print('recall :' , recall )
-
-# print('f1_score :' , f1score )
-
-'''CONFUSION MATRIX'''
-
-# from sklearn.metrics import confusion_matrix
-
-# y_true = [1, 1, 0, 0, 1, 0]
-# y_pred = [1, 0, 0, 0, 1, 1]
-
-# cm = confusion_matrix(y_true , y_pred)
-# print(cm)
-
-# #  RESULT - TN FP
-# #             FN TP
+# x = df[['Age' , 'Salary']]
 
 
-'''REGRESSION METRICES'''
+# scaler = StandardScaler()
+# # scaled_x = scaler.fit_transform(x)
+# # print(scaled_x)
 
-'''
+# #* K NEAREST NEIGHBORS
 
-Regression metrices are used when we are dealing with numerical predictions, such as - house price, student marks etc...
+# from sklearn.neighbors import KNeighborsRegressor
+# from sklearn.model_selection import train_test_split
+# from sklearn.metrics import mean_absolute_error , r2_score
 
-Regression matrix - MAE , MSE , RMSE , R square
+# knn = KNeighborsRegressor(n_neighbors = 3)
 
-'''
-# from sklearn.metrics import mean_absolute_error, mean_squared_error, root_mean_squared_error, r2_score
+# x = df[['Age']]
+# y = df['Salary']
 
-# y_true = [10, 20, 30, 40]
+# x_train , x_test , y_train , y_test = train_test_split(
+#     x,y,
+#     test_size = 0.2,
+#     random_state = 42
+# )
 
-# y_pred = [12, 18, 35, 38]
+# x_scaled = scaler.fit_transform(x_train)
+# x_test_scaled = scaler.transform(x_test)
 
-# mae = mean_absolute_error(y_true, y_pred)   
-# mse = mean_squared_error(y_true, y_pred) 
-# rmse = root_mean_squared_error(y_true, y_pred)
-# rsquare = r2_score(y_true, y_pred)
+# knn.fit(x_scaled , y_train)
 
-# print('mae :' , mae)
-# print('mse :' , mse)
-# print('rmse :' , rmse)
-# print('rsquare :' , rsquare)
+# y_pred = knn.predict(x_test_scaled)
+
+# print(r2_score(y_test , y_pred))

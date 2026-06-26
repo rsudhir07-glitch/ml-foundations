@@ -6,8 +6,7 @@ from sklearn.metrics import accuracy_score, precision_score , recall_score , f1_
 
 from sklearn.metrics import confusion_matrix
 
-df = pd.read_csv('/Users/sudhirkumardhankar/Ai:ML Learning/practiceml.py/titanicModel.py/titanic.csv')
-
+df = pd.read_csv('ml-practice/titanicModel/titanic.csv')
 # Filling the missing values 
 
 mean_age = df['Age'].mean()
