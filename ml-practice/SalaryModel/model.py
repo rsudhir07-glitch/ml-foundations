@@ -3,7 +3,7 @@ from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_absolute_error, mean_squared_error , root_mean_squared_error, r2_score
 
-df = pd.read_csv('/Users/sudhirkumardhankar/Ai:ML Learning/practiceml.py/employeeData.csv')
+df = pd.read_csv('ml-practice/SalaryModel/employeeData.csv')
 
 x = df[['Age' , 'Experience' , 'Education_Level' , 'Projects_Completed']]
 y = df['Salary']
