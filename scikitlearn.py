@@ -1,193 +1,193 @@
-# # from sklearn.preprocessing import LabelEncoder
-# # from sklearn.preprocessing import OneHotEncoder
-# # import pandas as pd
+# from sklearn.preprocessing import LabelEncoder
+# from sklearn.preprocessing import OneHotEncoder
+# import pandas as pd
 
-# # df = pd.DataFrame({
-# #     'places': ['Delhi', 'Mumbai', 'Delhi', 'Chennai', 'Mumbai']
-# # })
+# df = pd.DataFrame({
+#     'places': ['Delhi', 'Mumbai', 'Delhi', 'Chennai', 'Mumbai']
+# })
 
-# '''ENCODING'''
+'''ENCODING'''
 
-# # dummy = pd.get_dummies(df['places'])
-# # print(dummy) #* THIS WILL GIVE BOOLEAN ENCODED VALUES OF PLACES IN COLUMN 
+# dummy = pd.get_dummies(df['places'])
+# print(dummy) #* THIS WILL GIVE BOOLEAN ENCODED VALUES OF PLACES IN COLUMN 
 
-# # dummy = pd.get_dummies(df['places'], dtype = int)
-# # print(dummy) #* THIS WILL CHANGE THE BOOLEAN VALUES INTO Os AND 1s
+# dummy = pd.get_dummies(df['places'], dtype = int)
+# print(dummy) #* THIS WILL CHANGE THE BOOLEAN VALUES INTO Os AND 1s
 
-# # encoder = OneHotEncoder(sparse_output=False)
-# # df['encodedvalues'] = encoder.fit_transform(df[['places']])
-# # print(df)
+# encoder = OneHotEncoder(sparse_output=False)
+# df['encodedvalues'] = encoder.fit_transform(df[['places']])
+# print(df)
 
-# ''' FEATURE SCALING'''
+''' FEATURE SCALING'''
 
-# '''MIN MAX SCALING'''
+'''MIN MAX SCALING'''
 
-# #* TO BRING THE DATASET BETWEEN 0 AND 1, SO THAT LARGER VALUES DONT DOMINATE THE LEARNING MODEL
+#* TO BRING THE DATASET BETWEEN 0 AND 1, SO THAT LARGER VALUES DONT DOMINATE THE LEARNING MODEL
 
-# # from sklearn.preprocessing import MinMaxScaler
-# # import pandas as pd
+# from sklearn.preprocessing import MinMaxScaler
+# import pandas as pd
 
-# # ages = [18, 22, 30, 40] #* THIS IS A 1D ARRAY
-# # df = pd.DataFrame(ages) #* NOW IT IS CONVERTED INTO A DATAFRAME WITH A ROW AND COLUMN, WHICH MEANS ITS NOW A 2D ARRAY, BECAUSE MINMAXSCALER WORKS ONLY ON 2D ARRAYS
+# ages = [18, 22, 30, 40] #* THIS IS A 1D ARRAY
+# df = pd.DataFrame(ages) #* NOW IT IS CONVERTED INTO A DATAFRAME WITH A ROW AND COLUMN, WHICH MEANS ITS NOW A 2D ARRAY, BECAUSE MINMAXSCALER WORKS ONLY ON 2D ARRAYS
 
-# # scaler = MinMaxScaler()
-# # scaled_data =  scaler.fit_transform(df)
-# # # print(pd.DataFrame(scaled_data, columns = ['ages'])) #* HERE WE ARE CONVERTING THE SCALED DATA INTO A DATAFRAME AND GIVING NAME TO THE COLUMN AS AGE
+# scaler = MinMaxScaler()
+# scaled_data =  scaler.fit_transform(df)
+# # print(pd.DataFrame(scaled_data, columns = ['ages'])) #* HERE WE ARE CONVERTING THE SCALED DATA INTO A DATAFRAME AND GIVING NAME TO THE COLUMN AS AGE
 
-# ''''''
-# # import pandas as pd
-# # from sklearn.preprocessing import MinMaxScaler
+''''''
+# import pandas as pd
+# from sklearn.preprocessing import MinMaxScaler
 
-# # data = {
-# #     'AGE' : [20,25,30,35],
-# #     'SALARY' : [25000,40000,55000,70000]
-# # }
+# data = {
+#     'AGE' : [20,25,30,35],
+#     'SALARY' : [25000,40000,55000,70000]
+# }
 
-# # df = pd.DataFrame(data)
-# # scaler = MinMaxScaler()
+# df = pd.DataFrame(data)
+# scaler = MinMaxScaler()
 
-# # scaled = scaler.fit_transform(df)
-# # framed = pd.DataFrame(scaled , columns = df.columns)
-# # print(framed )
-# # print(framed.shape)
-# # print(framed.max())
-# # print(framed.min())
+# scaled = scaler.fit_transform(df)
+# framed = pd.DataFrame(scaled , columns = df.columns)
+# print(framed )
+# print(framed.shape)
+# print(framed.max())
+# print(framed.min())
 
-# '''STANDARDIZATION'''
+'''STANDARDIZATION'''
 
-# # import pandas as pd
-# # from sklearn.preprocessing import StandardScaler
+# import pandas as pd
+# from sklearn.preprocessing import StandardScaler
 
-# # data = {
-# #     'AGE' : [20,25,30,35],
-# #      'SALARY' : [25000,40000,55000,70000]
-# # }
-# # df = pd.DataFrame(data)
-# # scaler = StandardScaler()
-# # scaled = scaler.fit_transform(df)
-# # print(pd.DataFrame(scaled , columns= df.columns))
+# data = {
+#     'AGE' : [20,25,30,35],
+#      'SALARY' : [25000,40000,55000,70000]
+# }
+# df = pd.DataFrame(data)
+# scaler = StandardScaler()
+# scaled = scaler.fit_transform(df)
+# print(pd.DataFrame(scaled , columns= df.columns))
 
-# '''TRAIN TEST SPLIT'''
+'''TRAIN TEST SPLIT'''
 
-# # from sklearn.model_selection import train_test_split
-# # import pandas as pd
+# from sklearn.model_selection import train_test_split
+# import pandas as pd
 
-# # data = {
-# #     'Age': [22, 25, 47, 52, 46],
-# #     'Salary': [25000, 32000, 48000, 52000, 50000],
-# #     'Purchased': [0, 1, 1, 0, 1]
-# # }
+# data = {
+#     'Age': [22, 25, 47, 52, 46],
+#     'Salary': [25000, 32000, 48000, 52000, 50000],
+#     'Purchased': [0, 1, 1, 0, 1]
+# }
 
-# # df = pd.DataFrame(data)
+# df = pd.DataFrame(data)
 
-# # X = df[['Age', 'Salary']] #* X IS WHAT WE USE TO MAKE THE PREDICTION WHICH ARE CALLED FEATURES
+# X = df[['Age', 'Salary']] #* X IS WHAT WE USE TO MAKE THE PREDICTION WHICH ARE CALLED FEATURES
 
-# # y = df['Purchased'] #* Y IS WHAT WE WANT THE MODEL TO PREDICT
+# y = df['Purchased'] #* Y IS WHAT WE WANT THE MODEL TO PREDICT
 
-# # X_train, X_test, y_train, y_test = train_test_split(
-# #     X, y, test_size=0.2, random_state=42
-# # )
+# X_train, X_test, y_train, y_test = train_test_split(
+#     X, y, test_size=0.2, random_state=42
+# )
 
-# # print( y_test)  
+# print( y_test)  
 
-# ''''''
-# # import pandas as pd
-# # from sklearn.model_selection import train_test_split
+''''''
+# import pandas as pd
+# from sklearn.model_selection import train_test_split
 
 
-# # data = {
-# #     'Age': [20, 25, 30, 35, 40, 45],
-# #     'Salary': [25000, 30000, 40000, 50000, 60000, 70000],
-# #     'Purchased': [0, 0, 1, 1, 1, 0]
-# # }
-# # df = pd.DataFrame(data)
-# # x = df[['Age' , 'Salary']]
-# # y = df['Purchased']
+# data = {
+#     'Age': [20, 25, 30, 35, 40, 45],
+#     'Salary': [25000, 30000, 40000, 50000, 60000, 70000],
+#     'Purchased': [0, 0, 1, 1, 1, 0]
+# }
+# df = pd.DataFrame(data)
+# x = df[['Age' , 'Salary']]
+# y = df['Purchased']
 
-# # x_train, x_test , y_train , y_test = train_test_split(
-# #     x,y,
-# #     test_size=0.33,
-# #     random_state=42
-# # )
+# x_train, x_test , y_train , y_test = train_test_split(
+#     x,y,
+#     test_size=0.33,
+#     random_state=42
+# )
 
-# # print(x_train)
-# # print()
-# # print(x_test)
-# # print()
-# # print(y_train)
-# # print()
-# # print(y_test)
+# print(x_train)
+# print()
+# print(x_test)
+# print()
+# print(y_train)
+# print()
+# print(y_test)
 
-# '''REGRESSION'''
+'''REGRESSION'''
 
-# '''LINEAR REGRESSION'''
+'''LINEAR REGRESSION'''
 
-# # import pandas as pd
-# # from sklearn.linear_model import LinearRegression
+# import pandas as pd
+# from sklearn.linear_model import LinearRegression
 
-# # data =  {
-# #     'x' : [1,2,3,4],
-# #     'y' :  [8,11,14,17]
-# # }
+# data =  {
+#     'x' : [1,2,3,4],
+#     'y' :  [8,11,14,17]
+# }
 
-# # df = pd.DataFrame(data)
-# # x = df[['x']] #* WE WANT THE FEATURE/INPUT IN THE FORM OF A 2D ARRAY
-# # y = df['y']
+# df = pd.DataFrame(data)
+# x = df[['x']] #* WE WANT THE FEATURE/INPUT IN THE FORM OF A 2D ARRAY
+# y = df['y']
 
-# # model = LinearRegression()
-# # train = model.fit(x,y)
-# # prediction = model.predict([[5]])  
+# model = LinearRegression()
+# train = model.fit(x,y)
+# prediction = model.predict([[5]])  
 
-# # print(prediction)   
+# print(prediction)   
 
-# '''K N N '''
+'''K N N '''
 
-# #* PREDICTION IS BASED ON NEIGHBORS
-# #* 0 MEANS FALSE AND 1 MEANS TRUE
+#* PREDICTION IS BASED ON NEIGHBORS
+#* 0 MEANS FALSE AND 1 MEANS TRUE
    
-# # from sklearn.neighbors import KNeighborsClassifier
+# from sklearn.neighbors import KNeighborsClassifier
 
-# # X = [[1], [2], [3], [8], [9], [10]] 
+# X = [[1], [2], [3], [8], [9], [10]] 
 
-# # Y = [0, 0, 0, 1, 1, 1]
+# Y = [0, 0, 0, 1, 1, 1]
 
-# # model = KNeighborsClassifier(n_neighbors = 3) #* SEE FOR 3 NEIGHBORS
-# # model.fit(X,Y)
-# # prediction = model.predict([[7]])
-# # print(prediction)
-
-
-# '''LOGISTIC REGRESSION'''
-
-# # #* SAME AS LINEAR REGRESSION, BUT IT GIVES RESULTS IN THE FORM OF 0 OR 1 MEANING FALSE OR TRUE RESPECTIVELY
-
-# # from sklearn.linear_model import LogisticRegression
-
-# # X = [[1], [2], [3], [8], [9], [10]]
-# # Y = [0, 0, 0, 1, 1, 1]
-
-# # model = LogisticRegression()
-# # model.fit(X,Y)
-
-# # prediction = model.predict([[11]])[0] #* [0] GIVES THE INPUT VALUE ONLY, NOT A LIST 
-# # print(prediction)
+# model = KNeighborsClassifier(n_neighbors = 3) #* SEE FOR 3 NEIGHBORS
+# model.fit(X,Y)
+# prediction = model.predict([[7]])
+# print(prediction)
 
 
-# '''DECISION TREES'''
+'''LOGISTIC REGRESSION'''
 
-# # from sklearn.tree import DecisionTreeClassifier
+# #* SAME AS LINEAR REGRESSION, BUT IT GIVES RESULTS IN THE FORM OF 0 OR 1 MEANING FALSE OR TRUE RESPECTIVELY
 
-# # X = [[1], [2], [3], [5], [6], [7]]
+# from sklearn.linear_model import LogisticRegression
 
-# # Y = [0, 0, 0, 1, 1, 1]
+# X = [[1], [2], [3], [8], [9], [10]]
+# Y = [0, 0, 0, 1, 1, 1]
 
-# # model = DecisionTreeClassifier()
+# model = LogisticRegression()
+# model.fit(X,Y)
 
-# # model.fit(X, Y)
+# prediction = model.predict([[11]])[0] #* [0] GIVES THE INPUT VALUE ONLY, NOT A LIST 
+# print(prediction)
 
-# # prediction = model.predict([[4]])
 
-# # print(prediction)
+'''DECISION TREES'''
+
+# from sklearn.tree import DecisionTreeClassifier
+
+# X = [[1], [2], [3], [5], [6], [7]]
+
+# Y = [0, 0, 0, 1, 1, 1]
+
+# model = DecisionTreeClassifier()
+
+# model.fit(X, Y)
+
+# prediction = model.predict([[4]])
+
+# print(prediction)
 
 # '''CLASSIFICATION METRICES'''
 
@@ -311,3 +311,178 @@
 # y_pred = knn.predict(x_test_scaled)
 
 # print(r2_score(y_test , y_pred))
+
+'''RANDOM FOREST'''
+
+'''
+COLLECTION OF MANY DECISION TREES WHICH USE A RANDOM SUBSET OF DATA TO MAKE PREDICTIONS
+CALSSIFICATION IS DONE BY VOTING SYSTEM 
+REGRESSION IS DONE BY TAKING THE AVERAGE
+
+RANDOM FOREST WORKS BETTER WHEN TRAINING SAMPLE IS VERY HIGH 
+
+NO SCALING REQUIRED 
+HIGH ACCURACY
+LESS CHANCES OF OVERFITTING 
+CAN WORK WITH LARGE DATASET
+CAN HANDLE CLASSIFICATION AND REGRESSION
+
+USES MORE MEMORY
+USUALLY SLOWER THAN DECISION TREES
+
+'''
+# import pandas as pd
+# from sklearn.model_selection import train_test_split
+# from sklearn.ensemble import RandomForestClassifier, RandomForestRegressor
+
+# data = {
+#     'Age': [22, 25, 47, 52, 46],
+#     'Salary': [25000, 32000, 48000, 52000, 50000],
+#     'Purchased': [0, 1, 1, 0, 1]
+# }
+
+# df = pd.DataFrame(data)
+# x = df[['Age']]
+# y = df['Salary']
+
+# x_train , x_test , y_train , y_test  = train_test_split(
+#     x , y , 
+#     test_size = 0.2,
+#     random_state = 42
+# )
+# model_1 = RandomForestRegressor(n_estimators = 100 , random_state = 42)
+
+# model_1.fit(x_train , y_train)
+# y_pred = model_1.predict([[32]])
+# print(y_pred)
+
+
+'''GRADIENT BOOSTING'''
+
+'''
+
+MAKES TREES SEQUENTIALLY WITH EACH TREE TRYING TO CORRECT THE MAKES OF THE PREVIOUS ONE
+USED FOR BOTH CLASSIFICATION AND REGRESSION
+
+VERY HIGH ACCURACY
+SLOWER TO TRAIN
+MORE SENSITIVE TO TUNING
+CAN OVERFIT IF NOT TUNED
+
+'''
+
+# import pandas as pd
+# from sklearn.model_selection import train_test_split
+# from sklearn.ensemble import GradientBoostingRegressor
+
+# data = {
+#     'Age': [22, 25, 47, 52, 46],
+#     'Salary': [25000, 32000, 48000, 52000, 50000]
+# }
+
+# df = pd.DataFrame(data)
+
+# X = df[['Age']]
+# y = df['Salary']
+
+# X_train, X_test, y_train, y_test = train_test_split(
+#     X, y,
+#     test_size=0.2,
+#     random_state=42
+# )
+
+# model = GradientBoostingRegressor(
+#     n_estimators=100,
+#     learning_rate=0.1,
+#     random_state=42
+# )
+
+# model.fit(X_train, y_train)
+
+# prediction = model.predict([[32]])
+
+# print(prediction)
+
+''' SUPPORT VECTOR MACHINES - SVM'''
+
+# import pandas as pd 
+# from sklearn.preprocessing import StandardScaler
+# from sklearn.model_selection import train_test_split
+# from sklearn.svm import SVC , SVR
+
+'''
+
+SVC - SUPPORT VECTOR CLASSIFIER
+
+# '''
+# data = {
+#     'Age': [22, 25, 47, 52, 46],
+#     'Purchased': [0, 1, 1, 0, 1]
+# }
+
+# df = pd.DataFrame(data)
+
+# x = df[['Age']]
+# y = df['Purchased']
+
+# # splitting data into training and testing 
+# x_train , x_test , y_train , y_test = train_test_split(
+#     x, y , 
+#     test_size = 0.2,
+#     random_state = 42
+# )
+
+# # feature scaling 
+
+# scaler = StandardScaler()
+# x_train = scaler.fit_transform(x_train )
+# x_test = scaler.transform(x_test)
+
+# # svm 
+
+# svm = SVC(kernel='linear') # creating the model 
+# svm.fit(x_train , y_train ) # teaching the model
+
+# new_input = scaler.transform([[44]]) # applying the same scaling to the new_input as the training data 
+
+# prediction = svm.predict(new_input) 
+
+# print(prediction)
+
+
+'''SVR - SUPPORT VECTOR REGRESSOR'''
+
+
+# data = {
+#     'Age': [22, 25, 47, 52, 46],
+#     'Salary': [25000, 32000, 48000, 52000, 50000]
+# }
+
+# df = pd.DataFrame(data)
+
+# x = df[['Age']]
+# y = df['Salary']
+
+
+# # splitting data into training and testing 
+# x_train , x_test , y_train , y_test = train_test_split(
+#     x, y , 
+#     test_size = 0.2,
+#     random_state = 42
+# )
+
+# # feature scaling 
+
+# scaler = StandardScaler()
+# x_train = scaler.fit_transform(x_train)
+# x_test = scaler.transform(x_test)
+
+
+
+# model = SVR(kernel = 'rbf')
+# model.fit(x_train , y_train)
+
+# new_input = scaler.transform([[44]]) 
+# prediction = model.predict(new_input)
+
+# print(prediction)
