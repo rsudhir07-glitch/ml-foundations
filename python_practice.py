@@ -1,8 +1,4 @@
-
-
 """     FUNCTIONS PRACTICE SHEET    """
-
-
 
 '''LARGEST OF THE TWO '''
 
