@@ -121,10 +121,7 @@ print(y_test)
 
 '''FEATURE SCALING'''
  
-data = {
-    'Age': [20, 25, 30, 35, 40 , 45 , 50, 55, 60 , 65],
-    'Salary': [20000, 30000, 50000, 70000, 90000 , 100000 , 120000, 130000 , 140000 , 160000]
-}   
+ 
 df = pd.DataFrame(data)
 
 x = df[['Age' , 'Salary']]
