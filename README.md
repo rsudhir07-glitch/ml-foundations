@@ -6,37 +6,6 @@ This repository contains my practice code, experiments, and mini projects coveri
 
 ---
 
-## Repository Structure
-
-```
-ML-Foundations/
-│
-├── ml-practice/
-│   ├── SalaryModel/
-│   └── titanicModel/
-│
-├── scikitlearn/
-│   ├── regression.py
-│   ├── knn.py
-│   ├── decisionTree.py
-│   ├── randomForest.py
-│   ├── svm.py
-│   ├── gradientboosting.py
-│   ├── matrix.py
-│   └── scikitlearn.py
-│
-├── learningpython.py
-├── morepython.py
-├── practicenumpy.py
-├── practicepanda.py
-├── oop.py
-│
-├── README.md
-└── .gitignore
-```
-
----
-
 ## What You'll Find
 
 ### Python
@@ -107,24 +76,6 @@ The goal of this repository is to build a strong understanding of machine learni
 - Large Language Models (LLMs)
 - Retrieval-Augmented Generation (RAG)
 - AI Agents
-
----
-
-## Learning Progress
-
-- ✅ Python Fundamentals
-- ✅ Object-Oriented Programming
-- ✅ NumPy
-- ✅ Pandas
-- ✅ Data Cleaning & Preprocessing
-- ✅ Intro to Scikit-learn
-- ✅ Regression
-- ✅ Classification
-- ✅ Model Evaluation
-- ⏳ Statistics
-- ⏳ SQL
-- ⏳ Data Visualization
-- ⏳ Advanced Machine Learning
 
 ---
 
