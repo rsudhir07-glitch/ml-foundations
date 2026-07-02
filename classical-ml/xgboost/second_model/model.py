@@ -52,4 +52,17 @@ importance = pd.Series(
     index=X.columns
 ).sort_values(ascending=False)
 
-print(importance.head(20))
+
+
+accuracy = accuracy_score(y_test, y_pred,)
+precision = precision_score(y_test, y_pred,average="weighted")
+recall = recall_score(y_test, y_pred,average="weighted")
+f1score = f1_score(y_test, y_pred,average="weighted")
+cm = confusion_matrix(y_test, y_pred)
+
+print('accuracy is :' ,accuracy)
+print('precision is :' ,precision)
+print('recall is :' ,recall)
+print('f1_score is :' ,f1score)
+print('confusion matrix is :', cm)
+
